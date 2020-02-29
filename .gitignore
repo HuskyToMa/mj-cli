@@ -1,0 +1,10 @@
+# ide
+.history/
+.DS_Store
+
+# 缓存文件
+localCache/cache.json
+
+# npm
+node_modules
+package-lock.json

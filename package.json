@@ -1,0 +1,19 @@
+{
+  "name": "@mj/mj_frontend_cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "bin": {
+    "mj-cli": "./index.js"
+  },
+  "author": "mqx",
+  "license": "ISC",
+  "dependencies": {
+    "@mj/argv_store": "^1.0.2",
+    "chalk": "^3.0.0",
+    "inquirer": "^7.0.4",
+    "ora": "^4.0.3",
+    "rimraf": "^3.0.2"
+  }
+}
