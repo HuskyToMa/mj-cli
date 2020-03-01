@@ -1,16 +1,21 @@
 {
-  "name": "@mj/mj_frontend_cli",
-  "version": "1.0.0",
-  "description": "",
+  "name": "mj-cli",
+  "version": "1.0.2",
+  "description": "脚手架下载工具",
   "main": "index.js",
+  "keywords": ["nodejs", "cli"],
   "scripts": {},
   "bin": {
     "mj-cli": "./index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HuskyToMa/mj-cli.git"
+  },
   "author": "mqx",
   "license": "ISC",
   "dependencies": {
-    "@mj/argv_store": "^1.0.2",
+    "argv_store": "^1.0.1",
     "chalk": "^3.0.0",
     "inquirer": "^7.0.4",
     "ora": "^4.0.3",

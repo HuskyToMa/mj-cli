@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { downLoad } = require(`${path.resolve(__dirname, './tools/downLoad')}`);
-const argvStore = require('@mj/argv_store');
+const argvStore = require('argv_store');
 const { getInquirerResult } = require('./tools/inquirerFunc');
 
 

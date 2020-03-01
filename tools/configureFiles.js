@@ -16,14 +16,12 @@ const configure = {
     eslint: {
         use: true,
         callback: function() {
-            console.log('eslint');
             rm(`${this.path}/.eslintrc.js`);
         }
     },
     jest: {
         use: true,
         callback: function() {
-            console.log('jest');
             rm(`${this.path}/jest.config.js`);
             rm(`${this.path}/test`);
         }
@@ -31,14 +29,12 @@ const configure = {
     sass: {
         use: true,
         callback: function() {
-            console.log('sass');
             rm(`${this.path}/src/style/common.scss`);
         }
     },
     less: {
         use: true,
         callback: function() {
-            console.log('less');
             rm(`${this.path}/src/style/common.less`);
         }
     },
