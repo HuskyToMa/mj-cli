@@ -1,29 +1,11 @@
 #!/usr/bin/env node
-
-const fs = require('fs');
 const path = require('path');
-const { downLoad } = require(`${path.resolve(__dirname, './tools/downLoad')}`);
 const argvStore = require('argv_store');
-const { getInquirerResult } = require('./tools/inquirerFunc');
-
+const reactInit = require('./command/reactInit');
+const { readFileSync } = require('./tools/utils');
 
 const program = new argvStore();
-
-const readFileSync = (url) => {
-    return JSON.parse(fs.readFileSync(path.resolve(__dirname, url)).toString());
-}
-const packageJson = readFileSync('./package.json');
-
-const reactInit = async function(){
-    const argv = this.argvs.keyMap;
-
-    const downLoadTypes = readFileSync('./typeManifest.json');
-    const renameParam = argv['-r'] || argv['--rename'] || '';
-    const options = await getInquirerResult();
-
-    const url = downLoadTypes.react;
-    downLoad(options, url, renameParam);
-}
+const packageJson = readFileSync(path.resolve(__dirname, './package.json'));
 
 program
     .version(packageJson.version)

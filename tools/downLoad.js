@@ -56,7 +56,6 @@ const downLoad = async (options, url, renameParam) => {
             // 配置packagejson
             const packagePath = `./${dirName}/package.json`;
             const delConfig = getDelConfig([
-                ...css, 
                 ...module
             ]);
             const newJson = changeByOptions(packagePath, delConfig);

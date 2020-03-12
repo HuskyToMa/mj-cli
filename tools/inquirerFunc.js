@@ -35,12 +35,6 @@ const getResult = async () => {
         message: '请选择下面的几种插件：',
         choices: modulesConfig.module
     })
-    const cssOptions = await inquirer.prompt({
-        type: 'checkbox',
-        name: 'options',
-        message: '请选择css预编译期：',
-        choices: modulesConfig.css
-    })
 
     const isCache = await inquirer.prompt({
         type: 'confirm',
@@ -63,12 +57,10 @@ const getResult = async () => {
         }
         setCacheOptions({
             name: cacheName.name,
-            css: cssOptions.options,
             module: moduleOptions.options
         })
     }
     return {
-        css: cssOptions.options,
         module: moduleOptions.options
     }
 }

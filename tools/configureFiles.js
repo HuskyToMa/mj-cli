@@ -1,6 +1,5 @@
 const rimraf = require('rimraf');
 const modulesConfig = {
-    css: ['less', 'sass'],
     module: ['eslint', 'jest']
 }
 
@@ -26,18 +25,6 @@ const configure = {
             rm(`${this.path}/test`);
         }
     },
-    sass: {
-        use: true,
-        callback: function() {
-            rm(`${this.path}/src/style/common.scss`);
-        }
-    },
-    less: {
-        use: true,
-        callback: function() {
-            rm(`${this.path}/src/style/common.less`);
-        }
-    },
 }
 
 const run = () => {
@@ -61,7 +48,6 @@ const configureFiles = (dirPath, config) => {
 
 const getDelConfig = (need) => {
     const all = [
-        ...modulesConfig.css,
         ...modulesConfig.module
     ]
     return all.filter(item => !need.includes(item));
